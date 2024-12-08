@@ -1,13 +1,14 @@
-from pathlib import Path
 import os  
+from pathlib import Path
 
-os.environ 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+
+SECRET_KEY = 'django-insecure-+-%12f@7hogxz#(^j(*hn&h^c9&)6_6+&i^0sq#9ct@qvrj)q5'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -61,16 +62,24 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('NAME'),
-        'USER': os.environ.get('USER'),
-        'HOST': os.environ.get('HOST'), 
-        'POST': os.environ.get('POST'),
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.getenv('DB_NAME', 'db.sqlite3'),
+    }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.getenv('DB_NAME'),  
+#         'USER': os.getenv('DB_USER'),  
+#         'PASSWORD': os.getenv('DB_PASSWORD'),
+#         'HOST': os.getenv('DB_HOST'),  
+#         'PORT': os.getenv('DB_PORT', '5432')
+#     }
+# }
 
 
 # Password validation
