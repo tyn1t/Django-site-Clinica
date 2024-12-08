@@ -1,6 +1,6 @@
 # Site de Clínica - Django com Docker e PostgreSQL
 
-Este repositório contém o código fonte para um site de clínica construído com Django, utilizando Docker, PostgreSQL como banco de dados.  O projeto de agendamento de consultas e casdortra e acesso, do lado cliente e medico.
+Este repositório contém o código fonte para um site de clínica construído com Django, utilizando Docker, PostgreSQL como banco de dados.  O projeto de agendamento de consultas e cadastro e acesso, do lado cliente e medico.
 
 ## Funcionalidades Principais:
 
