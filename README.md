@@ -17,3 +17,23 @@ Este repositório contém o código fonte para um site de clínica construído c
 * **PostgreSQL:** Sistema de gerenciamento de banco de dados relacional.
 * **Docker:** Plataforma de containerização para desenvolvimento e implantação.
 * **Docker Compose:** Ferramenta para gerenciar aplicações multi-contêiner.
+
+
+### App 
+* account
+    * Login
+      * Solicitar credenciais do usuário.
+         - Usuário
+         - Email
+    * Registro 
+        - Nome
+        - Usuário
+        - Email
+    * Logout 
+        - Invalidar a sessão do usuário.
+    * Recuperação de senha **Password** 
+        - Permitir ao usuário definir uma nova senha.
+
+
+* clientes 
+* medico
