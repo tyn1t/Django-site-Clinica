@@ -1,7 +1,7 @@
 from django.urls import path 
-from medico.views import index
+from medico.views import DataAPIView
 
 
 urlpatterns = [
-    path('cadastror/', index, name="cadastror_medico")
+    path('creates/agenda/data', DataAPIView.as_view(), name="data")
 ]

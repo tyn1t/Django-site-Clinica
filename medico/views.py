@@ -1,6 +1,16 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import *
+from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
 
-# Create your views here.
-def index(request):
-    return HttpResponse('Bem vindo site Clinica teste medico')
+from .models import Data 
+from .serializers import *
+
+
+
+class DataAPIView(generics.CreateAPIView):
+    queryset = Data.objects.all()
+    serializer_class = DataSerializer 
+    permission_classes = [IsAuthenticated]
+
+
+

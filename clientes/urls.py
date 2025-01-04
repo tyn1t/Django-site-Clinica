@@ -1,6 +1,6 @@
 from django.urls import path 
-from clientes.views import index
+from clientes.views import ConsultaAPIView
 
 urlpatterns= [
-    path('cadastros/', index, name="cadastros")
+    path('Consultas/', ConsultaAPIView.as_view(), name="Consulta")
 ]
