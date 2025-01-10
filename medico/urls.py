@@ -3,5 +3,5 @@ from medico.views import DataAPIView
 
 
 urlpatterns = [
-    path('creates/agenda/data', DataAPIView.as_view(), name="data")
+    path('creates/agendas/datas', DataAPIView.as_view(), name="data")
 ]
